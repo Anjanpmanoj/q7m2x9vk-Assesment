@@ -57,3 +57,8 @@ python scripts/fetch_data.py
 - Decision time defaults to 09:00 the day before delivery. This is an assumption, so it is adjustable in the UI.
 - The error range is computed from the same January data it is evaluated on, so it is descriptive, not a proper out-of-sample prediction interval.
 - National-level wind only, no other data sources.
+
+## Live links
+- **Frontend (app):** https://q7m2x9vk-assesment-o28l.vercel.app/
+- **Backend health check:** https://q7m2x9vk-assesment.vercel.app/api/health
+- **API docs (Swagger):** https://q7m2x9vk-assesment.vercel.app/docs 
