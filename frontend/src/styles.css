@@ -1,0 +1,34 @@
+:root {
+  --bg: #eef2f1; --panel: #fbfcfc; --ink: #16262e; --muted: #5c6e75; --line: #d6dfdd; --teal: #0b7f8c; --indigo: #4b4fb3;
+  font-family: "Schibsted Grotesk", system-ui, sans-serif;
+  color: var(--ink);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); line-height: 1.5; }
+main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 48px; }
+h1, h2 { font-family: "Newsreader", Georgia, serif; font-weight: 600; margin: 0; }
+h1 { font-size: clamp(30px, 5vw, 44px); letter-spacing: -0.01em; }
+h2 { font-size: 24px; }
+.top { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; }
+.top p { max-width: 56ch; color: var(--muted); margin: 8px 0 0; }
+.controls { display: flex; gap: 16px; flex-wrap: wrap; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--muted); }
+input, select { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+input:focus-visible, select:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 24px; margin-bottom: 20px; }
+.panel header { margin-bottom: 16px; }
+.panel header p { color: var(--muted); margin: 4px 0 0; max-width: 70ch; font-size: 15px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 20px; }
+.stat { border-left: 3px solid var(--teal); padding-left: 12px; }
+.stat-label { font-size: 14px; color: var(--muted); }
+.stat-value { font-family: "Newsreader", Georgia, serif; font-size: 30px; font-weight: 600; }
+.stat-unit { font-size: 15px; color: var(--muted); font-family: "Schibsted Grotesk", sans-serif; font-weight: 400; }
+.stat-note { font-size: 13px; color: var(--muted); }
+.chart { height: 280px; }
+.chart.tall { height: 340px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px; }
+.two .panel { margin-bottom: 0; }
+.error { color: #a12626; }
+.muted { color: var(--muted); }
+footer { margin-top: 24px; font-size: 13px; color: var(--muted); max-width: 80ch; }
+@media (max-width: 480px) { .two { grid-template-columns: 1fr; } .panel { padding: 16px; } }
